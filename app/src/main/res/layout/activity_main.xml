@@ -9,7 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="启动服务"
+        android:textAllCaps="false"
+        android:text="启动服务(BindService)"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -18,9 +19,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="停止服务"
+        android:textAllCaps="false"
+        android:text="停止服务(BindService)"
         app:layout_constraintStart_toEndOf="@+id/btn_service_start"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_service_start2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textAllCaps="false"
+        android:text="启动服务(StartService)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_service_start"/>
+
+    <Button
+        android:id="@+id/btn_service_stop2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textAllCaps="false"
+        android:text="停止服务(StartService)"
+        app:layout_constraintStart_toEndOf="@+id/btn_service_start"
+        app:layout_constraintTop_toBottomOf="@+id/btn_service_start"/>
 
     <Button
         android:id="@+id/btn_screen_capture"
@@ -29,15 +51,15 @@
         android:layout_margin="8dp"
         android:text="屏幕截图"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_service_start" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_service_start2" />
 
     <TextView
         android:id="@+id/recorder_time_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:text="00:00:00:00"
-        app:layout_constraintStart_toEndOf="@+id/btn_service_start"
+        android:text="录屏计时：00:00:00:00"
+        app:layout_constraintStart_toEndOf="@+id/btn_screen_capture"
         app:layout_constraintTop_toTopOf="@id/btn_screen_capture" />
 
     <Button
